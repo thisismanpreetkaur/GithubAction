@@ -34,4 +34,22 @@ jobs:
             python demo.py
             python demo2.py
             
+  build2:
+      needs: build
+      # The type of runner that the job will run on
+      runs-on: ubuntu-latest
+
+      # Steps represent a sequence of tasks that will be executed as part of the job
+      steps:
+        # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+        - uses: actions/checkout@v3
+        - uses: actions/setup-python@v4
+          with:
+              python-version: '3.10' 
+
+        # Runs a single command using the runners shell
+        - name: Run a program script
+          run: |
+              python demo3.py
+            
             
