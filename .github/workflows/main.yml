@@ -32,4 +32,6 @@ jobs:
       - name: Run a one-line script & addition
         run: |
             python demo.py
+            python demo2.py
+            
             
